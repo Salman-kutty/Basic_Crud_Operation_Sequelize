@@ -1,4 +1,4 @@
-const e = require("express");
+
 const Employee = require("../model/Employee");
 
 const responseData = {
@@ -142,6 +142,7 @@ const paginationFunc = async (req, res) => {
         } else {
             errorData.MESSAGE = "Incorrect Request Body..";
             res.status(400).json(errorData);
+            return
 
         }
     } catch (error) {
